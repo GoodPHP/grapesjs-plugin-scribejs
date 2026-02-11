@@ -1,5 +1,7 @@
 # grapesjs-plugin-scribejs
 
+![ScribeJS Demo](assets/demo.png)
+
 A professional GrapesJS plugin that replaces the built-in Rich Text Editor with [ScribeJS](https://scribejs.top) — a powerful, modern rich text editor with full formatting capabilities, customizable toolbar, and extensive API.
 
 Demo: [https://devfuture.pro/live/scribejs/](https://devfuture.pro/live/scribejs/)
