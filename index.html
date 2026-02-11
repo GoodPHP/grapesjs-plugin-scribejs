@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GrapesJS Plugin ScribeJS</title>
+  <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/grapesjs"></script>
+  <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+  <!-- 
+      During development ('npm start'), the plugin is served from memory at ./index.js.
+      When building for production ('npm run build'), the file will be in ./dist/index.js.
+    -->
+  <!-- <script src="./dist/index.js"></script> -->
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <div id="gjs" style="height:0; overflow:hidden"></div>
+  <script type="text/javascript">
+
+    var editor = grapesjs.init({
+      container: '#gjs',
+      fromElement: true,
+      height: '100vh',
+      storageManager: false,
+      // Try to use the global variable which grapesjs-cli typically creates: 'grapesjsPluginScribejs'
+      // attempting to detect it or just use the string if it self-registers (it likely doesn't self-register with a name in the code)
+      plugins: ['grapesjs-plugin-scribejs', 'gjs-blocks-basic'],
+      pluginsOpts: {
+        'grapesjs-plugin-scribejs': {
+          outputFormat: 'html',
+          debug: false,
+          features: { tables: true, media: true, code: true },
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
